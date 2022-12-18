@@ -26,10 +26,10 @@
 | name               | string     | null: false                    |
 | text               | text       | null: false                    |
 | genre_id           | integer    | null: false                    |
-| item-condition_id  | integer    | null: false                    |
-| delivery-charge_id | integer    | null: false                    |
+| item_condition_id  | integer    | null: false                    |
+| delivery_charge_id | integer    | null: false                    |
 | prefecture_id      | integer    | null: false                    |
-| delivery-time_id   | integer    | null: false                    |
+| delivery_time_id   | integer    | null: false                    |
 | item_price         | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
