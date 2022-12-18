@@ -25,11 +25,11 @@
 | ------------------ | ---------- | ------------------------------ |
 | name               | string     | null: false                    |
 | text               | text       | null: false                    |
-| genre              | integer    | null: false                    |
-| item_condition     | integer    | null: false                    |
-| delivery_charge    | integer    | null: false                    |
-| prefecture         | integer    | null: false                    |
-| delivery_time      | integer    | null: false                    |
+| genre_id           | integer    | null: false                    |
+| item-condition_id  | integer    | null: false                    |
+| delivery-charge_id | integer    | null: false                    |
+| prefecture_id      | integer    | null: false                    |
+| delivery-time_id   | integer    | null: false                    |
 | item_price         | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
