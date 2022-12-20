@@ -8,15 +8,14 @@ development:
   username: root
   password:
   host: localhost
-  database: ajax_app_development
-
+  database: furima_38354_development
 test:
   <<: *default
   adapter: mysql2
   username: root
   password:
   host: localhost
-  database: ajax_app_test
+  database: furima_38354_test
 
 production:
   <<: *default
