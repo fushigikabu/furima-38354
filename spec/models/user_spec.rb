@@ -90,10 +90,31 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("First name reading can't be blank")
       end
+      it 'first_name_readingにひらがなが含まれている場合は登録できない' do
+        @user.first_name_reading='てすと'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name reading は全角カタカナで入力して下さい")
+      end
+      it 'first_name_readingに漢字が含まれている場合は登録できない' do
+        @user.first_name_reading='田中'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name reading は全角カタカナで入力して下さい")
+      end
       it 'last_name_readingが空だと登録出来ない' do
         @user.last_name_reading = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Last name reading can't be blank")
+      end
+      it 'last_name_readingにひらがなが含まれている場合は登録できない' do
+        @user.last_name_reading='てすと'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Last name reading は全角カタカナで入力して下さい")
+      end
+      it 'last_name_readingに漢字が含まれている場合は登録できない' do
+        @user.last_name_reading='田中'
+        @user.valid?
+        binding.pry
+        expect(@user.errors.full_messages).to include("Last name reading は全角カタカナで入力して下さい")
       end
       it 'birthdayが空だと登録出来ない' do
         @user.birthday = ''
