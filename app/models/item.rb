@@ -6,6 +6,8 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :delivery_time
 
+  belongs_to :user
+
   has_one_attached :image
 
   validates :name, :text, :image, presence: true
