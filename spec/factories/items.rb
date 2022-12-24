@@ -1,7 +1,5 @@
 FactoryBot.define do
-
   factory :item do
-
     name { Faker::Name.name }
     text { Faker::Lorem.sentence }
     genre_id { Faker::Number.between(from: 2, to: 11) }
@@ -16,7 +14,5 @@ FactoryBot.define do
     after(:build) do |item|
       item.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
     end
-
   end
-
 end
